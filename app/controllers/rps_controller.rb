@@ -1,20 +1,30 @@
 class RpsController < ApplicationController
+  def rules
+    render({:template => "game_templates/homepage"})
+  end
+
   def rock
     @ours = "rock"
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
+
+    render({:template => "game_templates/rock"})
   end
 
   def paper
     @ours = "paper"
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
+
+    render({:template => "game_templates/paper"})
   end
 
   def scissors
     @ours = "scissors"
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
+
+    render({:template => "game_templates/scissors"})
   end
 
   private
