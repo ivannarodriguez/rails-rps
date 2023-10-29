@@ -8,7 +8,7 @@ class RpsController < ApplicationController
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
 
-    render({:template => "game_templates/rock"})
+    render({:template => "game_templates/outcome"})
   end
 
   def paper
@@ -16,7 +16,7 @@ class RpsController < ApplicationController
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
 
-    render({:template => "game_templates/paper"})
+    render({:template => "game_templates/outcome"})
   end
 
   def scissors
@@ -24,7 +24,7 @@ class RpsController < ApplicationController
     @theirs = ["rock", "paper", "scissors"].sample
     @result = rock_paper_scissors(@ours, @theirs)
 
-    render({:template => "game_templates/scissors"})
+    render({:template => "game_templates/outcome"})
   end
 
   private
